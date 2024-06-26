@@ -1,41 +1,30 @@
-body {
-    font-family: Arial, sans-serif;
+#calendar-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
+    flex-wrap: wrap;
 }
 
-.calendar {
-    text-align: center;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-}
-
-.days button {
+.month {
+    border: 1px solid #ccc;
+    margin: 10px;
     padding: 10px;
-    background: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    width: 200px;
+}
+
+.day {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 2px;
+    border: 1px solid #ccc;
     cursor: pointer;
 }
 
-.days button:hover {
-    background: #0056b3;
+#verse-container {
+    margin-top: 20px;
 }
 
-.bible-verse {
-    margin-top: 20px;
-    text-align: center;
+#bible-verse {
+    font-size: 18px;
 }
