@@ -10,13 +10,28 @@ document.addEventListener('DOMContentLoaded', () => {
         30: "요한복음 3:16 - 하나님이 세상을 이처럼 사랑하사 독생자를 주셨으니...",
     };
 
-    for (let day = 1; day <= 30; day++) {
+    const daysInJune2024 = [
+        "", "", "", "", "", "", 1,
+        2, 3, 4, 5, 6, 7, 8,
+        9, 10, 11, 12, 13, 14, 15,
+        16, 17, 18, 19, 20, 21, 22,
+        23, 24, 25, 26, 27, 28, 29,
+        30
+    ];
+
+    daysInJune2024.forEach(day => {
         const button = document.createElement('button');
-        button.innerText = day;
-        button.addEventListener('click', () => {
-            const verse = bibleVerses[day] || "성경 구절이 없습니다.";
-            bibleVerseContainer.innerText = verse;
-        });
+        button.innerText = day ? day : '';
+        if (day) {
+            button.addEventListener('click', () => {
+                const verse = bibleVerses[day] || "성경 구절이 없습니다.";
+                bibleVerseContainer.innerText = verse;
+            });
+        } else {
+            button.disabled = true;
+            button.style.background = 'transparent';
+            button.style.cursor = 'default';
+        }
         daysContainer.appendChild(button);
-    }
+    });
 });
