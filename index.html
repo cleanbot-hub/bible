@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Bible Verse Calendar</title>
+    <title>매일성경 요약</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="calendar-container"></div>
-    <div id="verse-container">
-        <p id="bible-verse"></p>
+    <div id="calendar-controls">
+        <button id="prev-month">&lt;</button>
+        <span id="calendar-title"></span>
+        <button id="next-month">&gt;</button>
+    </div>
+    <div id="calendar"></div>
+    <div id="content">
+        <h1>Welcome</h1>
+        <p>Click on a date in the calendar to see the content change.</p>
     </div>
     <script src="script.js"></script>
 </body>
