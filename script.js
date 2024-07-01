@@ -1,4 +1,7 @@
 // script.js
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const calendar = document.getElementById('calendar');
     const content = document.getElementById('content');
@@ -7,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextMonthButton = document.getElementById('next-month');
 
     let currentYear, currentMonth;
+ 
 
     function createCalendar(year, month) {
         currentYear = year;
